@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Lost & Found Tracker</title>
+    <style>
+        /* CSS: Styling for a modern, clean look */
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f6f9;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        .section {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 25px;
+        }
+        h2 {
+            margin-top: 0;
+            color: #34495e;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 10px;
+        }
+        /* Form Styling */
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        /* Items Grid Styling */
+        .items-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+            gap: 15px;
+        }
+        .item-card {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 15px;
+            border-left: 5px solid #e74c3c; /* Red border means 'Unclaimed' */
+        }
+        .item-card.claimed {
+            border-left-color: #2ecc71; /* Green border means 'Claimed' */
+        }
+        .item-title {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        .item-meta {
+            font-size: 13px;
+            color: #7f8c8d;
+            margin-bottom: 8px;
+        }
+        .status-badge {
+            display: inline-block;
+            padding: 3px 8px;
+            font-size: 12px;
+            border-radius: 12px;
+            font-weight: bold;
+            background: #fce4d6;
+            color: #d35400;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🎒 School Lost & Found Tracker</h1>
+        
+        <!-- Section 1: Form to report a found item -->
+        <div class="section">
+            <h2>📢 Report a Found Item</h2>
+            <form id="lostForm">
+                <div class="form-group">
+                    <label for="itemName">Item Name</label>
+                    <input type="text" id="itemName" placeholder="e.g., Water Bottle, Geometry Box" required>
+                </div>
+                <div class="form-group">
+                    <label for="itemLocation">Where was it found?</label>
+                    <input type="text" id="itemLocation" placeholder="e.g., Playground, Class 8B, Library" required>
+                </div>
+                <div class="form-group">
+                    <label for="itemDesc">Quick Description</label>
+                    <textarea id="itemDesc" rows="3" placeholder="e.g., Blue Milton bottle with a superhero sticker"></textarea>
+                </div>
+                <button type="button" onclick="addItem()">List Found Item</button>
+            </form>
+        </div>
+
+        <!-- Section 2: Grid displaying currently active lost items -->
+        <div class="section">
+            <h2>🔎 Current Found Items</h2>
+            <div class="items-grid" id="itemsContainer">
+                
+                <!-- Sample Static Item 1 -->
+                <div class="item-card">
+                    <div class="item-title">Milton Water Bottle</div>
+                    <div class="item-meta">📍 Found at: Football Ground</div>
+                    <p style="margin: 5px 0; font-size: 14px;">Blue color, has a scratch on the cap.</p>
+                    <span class="status-badge">Unclaimed</span>
+                </div>
+
+                <!-- Sample Static Item 2 -->
+                <div class="item-card">
+                    <div class="item-title">Parker Fountain Pen</div>
+                    <div class="item-meta">📍 Found at: Physics Lab</div>
+                    <p style="margin: 5px 0; font-size: 14px;">Black shiny body with silver clip.</p>
+                    <span class="status-badge">Unclaimed</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript Logic will go here to make the form work dynamically!
+        function addItem() {
+            // We will write the code to add real items here next.
+            alert("Button clicked! Next, we will write JavaScript to add this item to the grid automatically.");
+        }
+    </script>
+
+</body>
+</html>
